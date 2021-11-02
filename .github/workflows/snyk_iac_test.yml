@@ -13,7 +13,7 @@ jobs:
         with:
           file: goof-deployment.yaml
           json: true
-          serif: false
+          sarif: false
       - name: Parse results
         id: snyk_results
         uses: b4den/snyk-to-markdown-action@master
