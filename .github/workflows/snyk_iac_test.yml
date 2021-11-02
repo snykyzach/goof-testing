@@ -20,5 +20,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          message: "${{ steps.iactest.outputs }}"
+          message: "${{ join(steps.iactest.outputs.*, '\n') }}"
           allow-repeats: true
