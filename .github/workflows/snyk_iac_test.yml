@@ -16,9 +16,3 @@ jobs:
           file: goof-deployment.yaml
           json: false
           sarif: false
-      - uses: mshick/add-pr-comment@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          message: "${{ join(steps.iactest.outputs.*, '\n') }}"
-          allow-repeats: true
